@@ -13,7 +13,8 @@ import org.spongepowered.asm.mixin.injection.At;
 public class AttackCooldownMixin {
 	@ModifyReturnValue(method = "getAttackCooldownProgress", at = @At("RETURN"))
 	private float resetAttackCooldown(float original) {
-		return isSword() || isAxe() ? 1.0f: original ;
+		// return isSword() || isAxe() ? 1.0f: original ;
+		return 1.0f ;
 	}
 
 	private boolean isSword() {

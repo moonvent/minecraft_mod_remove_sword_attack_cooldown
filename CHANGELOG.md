@@ -1,3 +1,7 @@
+# 2.0.0
+
+1. Remove cooldown for any item;
+
 # 1.0.13
 
 1. Add axe support;
