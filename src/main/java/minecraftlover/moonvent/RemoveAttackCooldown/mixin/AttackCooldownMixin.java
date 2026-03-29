@@ -1,27 +1,15 @@
 package minecraftlover.moonvent.RemoveAttackCooldown.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.AxeItem;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-
-@Mixin(PlayerEntity.class)
+@Mixin(Player.class)
 public class AttackCooldownMixin {
-	@ModifyReturnValue(method = "getAttackCooldownProgress", at = @At("RETURN"))
+	@ModifyReturnValue(method = "getAttackStrengthScale", at = @At("RETURN"))
 	private float resetAttackCooldown(float original) {
-		// return isSword() || isAxe() ? 1.0f: original ;
-		return 1.0f ;
-	}
-
-	private boolean isSword() {
-		return MinecraftClient.getInstance().player.getMainHandStack().getItem() instanceof SwordItem;
-	}
-
-	private boolean isAxe() {
-		return MinecraftClient.getInstance().player.getMainHandStack().getItem() instanceof AxeItem;
+    	return 1.0f;
 	}
 }

@@ -19,8 +19,8 @@
 		"remove_attack_cooldown.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.3",
-		"minecraft": ">=1.14",
-		"java": ">=8"
+		"fabricloader": ">=0.16",
+		"minecraft": "26.1",
+		"java": ">=25"
 	}
 }

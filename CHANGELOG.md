@@ -1,3 +1,7 @@
+# 26.1
+
+1. Update compatibility for minecraft 26.1
+
 # 2.0.0
 
 1. Remove cooldown for any item;
